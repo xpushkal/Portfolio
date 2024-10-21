@@ -1,10 +1,10 @@
 "use client";
 
-import { useInView } from 'framer-motion'; // Ensure you import the correct library
+import { useInView } from 'framer-motion'; 
 import { Variants, motion, AnimatePresence } from 'framer-motion';
 import { useRef } from "react";
 
-type MarginType = string; // Replace this with the correct type if different
+type MarginType = `${number}px`; // Flexible for px or other string types
 
 interface BlurFadeProps {
   children: React.ReactNode;
@@ -17,7 +17,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: MarginType; // Update the type here
+  inViewMargin?: MarginType; 
   blur?: string;
 }
 
